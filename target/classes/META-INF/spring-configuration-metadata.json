@@ -1,0 +1,17 @@
+{
+  "groups": [
+    {
+      "name": "tggapps",
+      "type": "au.com.tgg.apps.foundation.util.AzureAppConfigProperties",
+      "sourceType": "au.com.tgg.apps.foundation.util.AzureAppConfigProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "tggapps.message",
+      "type": "java.lang.String",
+      "sourceType": "au.com.tgg.apps.foundation.util.AzureAppConfigProperties"
+    }
+  ],
+  "hints": []
+}
