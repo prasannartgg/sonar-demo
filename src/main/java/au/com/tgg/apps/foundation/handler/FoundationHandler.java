@@ -32,11 +32,9 @@ public class FoundationHandler {
 
 
     public Mono<ServerResponse> validateJson(ServerRequest serverRequest) {
-        try {
-            ServiceBusHandler.receiveMessages();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
+        // receive SB
+        recieveServiceBusMsgs(serverRequest);
+        // receive SB
         return serverRequest.bodyToMono(String.class)
                 .flatMap(reqBody -> validatorService.validateJson(reqBody))
                 .flatMap(respBody -> ServerResponse.ok()
@@ -52,6 +50,14 @@ public class FoundationHandler {
 //        return ServerResponse.ok().body(mapped, String.class);
     }
 
+    public Mono<String> recieveServiceBusMsgs(ServerRequest serverRequest) {
+        try {
+            ServiceBusHandler.receiveMessages();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        return Mono.just("success");
+    }
 
 
 }
