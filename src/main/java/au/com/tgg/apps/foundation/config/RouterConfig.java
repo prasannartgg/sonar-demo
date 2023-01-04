@@ -52,48 +52,5 @@ public class RouterConfig {
 //                                        .parameter(parameterBuilder().in(ParameterIn.PATH).name("brandCode").description("Brand Code"))
                                 .response(responseBuilder().responseCode("200").description("successful operation"))
                 ).build());
-
-//                .and(route().GET("/api/brand/{brandCode}", foundationHandler::findBrand,
-//                        ops -> ops.operationId("brand-brand-code").summary("Find Brand By Brand Code")
-//                                .parameter(parameterBuilder().in(ParameterIn.PATH).name("brandCode").description("Brand Code"))
-//                                .response(responseBuilder().responseCode("200").description("successful operation").implementation(Brand.class)))
-//                        .build())
-//                /*.and(route().GET("/api/brands", foundationHandler::findAllBrand,
-//                        ops -> ops.operationId("brands").summary("Get Brand List")
-//                                .response(responseBuilder().responseCode("200").description("successful operation").implementationArray(Brand.class)))
-//                        .build())*/
-//                .and(route().GET("/api/brands", foundationHandler::findAllBrandByPage,
-//                        ops -> ops.operationId("brands").summary("Get Brand Page")
-//                                .parameter(parameterBuilder().required(false).in(ParameterIn.QUERY).name("page").description("Page number (default 0)"))
-//                                .parameter(parameterBuilder().required(false).in(ParameterIn.QUERY).name("size").description("Number of items per page (default(5)"))
-//                                .parameter(parameterBuilder().required(false).in(ParameterIn.QUERY).name("sort").description("Sort list (default brandCode)"))
-//                                .parameter(parameterBuilder().required(false).in(ParameterIn.QUERY).name("brandCode").description("Brand Code, can pass multiple params, checks if code contains %brandCode%"))
-//                                .parameter(parameterBuilder().required(false).in(ParameterIn.QUERY).name("brandName").description("Brand Name contains %brandName%"))
-//                                .response(responseBuilder().responseCode("200").description("successful operation").implementationArray(Brand.class)))
-//                        .build())
-//                .and(route().GET("/api/products", appSvcHandler::findProductsByMerch,
-//                        ops -> ops.operationId("product-merch").summary("Calls appsvc API to get List of products per store based on parameter inputs")
-//                                .parameter(parameterBuilder().required(false).in(ParameterIn.QUERY).name("dep").description("Department Code"))
-//                                .parameter(parameterBuilder().required(false).in(ParameterIn.QUERY).name("class").description("Class Code"))
-//                                .parameter(parameterBuilder().required(false).in(ParameterIn.QUERY).name("subclass").description("Subclass Code"))
-//                                .parameter(parameterBuilder().required(false).in(ParameterIn.QUERY).name("brand").description("Brand Code"))
-//                                .parameter(parameterBuilder().required(false).in(ParameterIn.QUERY).name("prod").description("Prod Nbr"))
-//                                .parameter(parameterBuilder().required(true).in(ParameterIn.QUERY).name("locn").description("locn nbr"))
-//                                .response(responseBuilder().responseCode("200").description("successful operation").implementationArray(ItemLocCostDTO.class)))
-//                        .build());
-
-      /*  return RouterFunctions.route()
-                .GET("/",utilHandler::healthCheck)
-                .GET("/api/brand/{brandCode}",foundationHandler::findBrand)
-                .GET("/api/brand/",foundationHandler::findAllBrand)
-                .GET("/api/products",appSvcHandler::findProductsByMerch)
-                .build();
-
-                        parameters.put("dep", dep.get());
-        parameters.put("class", clas.get());
-        parameters.put("subclass", subclass.get());
-        parameters.put("brand", brand.get());
-        parameters.put("prod", prod.get());
-        parameters.put("locn", locn.get());*/
     }
 }

@@ -7,10 +7,10 @@ au\com\tgg\apps\foundation\repository\MerchDepsRepository.class
 au\com\tgg\apps\foundation\model\tggcsodr\QLocationSetDtlEntity.class
 au\com\tgg\apps\foundation\repository\LocationSetCtlRepository.class
 au\com\tgg\apps\foundation\model\json\Location.class
+au\com\tgg\apps\foundation\service\impl\ValidatorServiceImpl.class
 au\com\tgg\apps\foundation\service\impl\ProductUdaMapServiceImpl.class
 au\com\tgg\apps\foundation\model\tggcsodr\SupplierAccountProductEntity.class
 au\com\tgg\apps\foundation\util\exception\TggErrorWebExceptionHandler.class
-META-INF\spring-configuration-metadata.json
 au\com\tgg\apps\foundation\model\json\MerchClass.class
 au\com\tgg\apps\foundation\repository\SupplierAccountRepository.class
 au\com\tgg\apps\foundation\service\impl\ProductVolumetricsCrudServiceImpl.class
@@ -32,7 +32,6 @@ au\com\tgg\apps\foundation\model\tggcsodr\QMerchDepsEntity.class
 au\com\tgg\apps\foundation\model\json\LocationState.class
 au\com\tgg\apps\foundation\model\json\ProductUdaMap.class
 au\com\tgg\apps\foundation\util\JsonDateTimeSerializer.class
-au\com\tgg\apps\foundation\service\impl\ValidatorService.class
 au\com\tgg\apps\foundation\model\json\LocationStateMapping.class
 au\com\tgg\apps\foundation\model\tggcsodr\ProductVolumetricsId.class
 au\com\tgg\apps\foundation\model\QCodeHead.class
@@ -139,6 +138,7 @@ au\com\tgg\apps\foundation\util\FoundationUtil.class
 au\com\tgg\apps\foundation\model\MerchUdaFieldMap.class
 au\com\tgg\apps\foundation\handler\ServiceBusHandler.class
 au\com\tgg\apps\foundation\repository\MerchSubclassRepository.class
+au\com\tgg\apps\foundation\service\ValidatorService.class
 au\com\tgg\apps\foundation\util\AzureCredentials.class
 au\com\tgg\apps\foundation\model\json\JsonHeader.class
 au\com\tgg\apps\foundation\model\json\ProductBarcode.class
@@ -162,6 +162,7 @@ au\com\tgg\apps\foundation\service\impl\MerchSubclassCrudServiceImpl.class
 au\com\tgg\apps\foundation\model\tggcsodr\ProductUdaMapEntity.class
 au\com\tgg\apps\foundation\model\QCaseItem.class
 au\com\tgg\apps\foundation\repository\ProductCoreRangeRepository.class
+au\com\tgg\apps\foundation\util\TopicReceiveController.class
 au\com\tgg\apps\foundation\model\json\StoreAddress.class
 au\com\tgg\apps\foundation\repository\MerchUdaRepository.class
 au\com\tgg\apps\foundation\model\json\MerchUdaHierDefault.class

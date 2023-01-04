@@ -15,7 +15,7 @@
     <description>Skeleton Application for Webflux</description>
     <properties>
         <java.version>1.8</java.version>
-        <azure.version>2.3.1</azure.version>
+        <azure.version>4.5.0</azure.version>
         <spring-cloud.version>2020.0.2</spring-cloud.version>
         <postgres_jdbc_driver_version>42.2.18</postgres_jdbc_driver_version>
     </properties>
@@ -55,25 +55,14 @@
             <artifactId>postgresql</artifactId>
             <version>${postgres_jdbc_driver_version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.querydsl</groupId>
-            <artifactId>querydsl-apt</artifactId>
-            <version>${querydsl.version}</version>
-            <scope>provided</scope>
-        </dependency>
-
-        <dependency>
-            <groupId>com.querydsl</groupId>
-            <artifactId>querydsl-jpa</artifactId>
-            <version>${querydsl.version}</version>
-        </dependency>
         <!-- End: JPA and Database -->
 
         <!-- App Config and Key Vault -->
+        <!-- https://mvnrepository.com/artifact/com.azure.spring/azure-spring-cloud-appconfiguration-config -->
         <dependency>
-            <groupId>com.microsoft.azure</groupId>
-            <artifactId>spring-cloud-azure-appconfiguration-config</artifactId>
-            <version>1.3.0</version>
+            <groupId>com.azure.spring</groupId>
+            <artifactId>azure-spring-cloud-appconfiguration-config</artifactId>
+            <version>2.10.0</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -116,37 +105,17 @@
             <artifactId>azure-storage-blob</artifactId>
             <version>12.20.0</version>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>com.azure.spring</groupId>-->
-<!--            <artifactId>spring-cloud-azure-starter-servicebus-jms</artifactId>-->
-<!--            <version>4.5.0</version>-->
-<!--        </dependency>-->
+        <dependency>
+            <groupId>com.azure.spring</groupId>
+            <artifactId>spring-cloud-azure-starter-servicebus-jms</artifactId>
+            <version>4.5.0</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/com.azure/azure-core -->
         <dependency>
             <groupId>com.azure</groupId>
             <artifactId>azure-core</artifactId>
             <version>1.34.0</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/org.springframework/spring-jms -->
-<!--        <dependency>-->
-<!--            <groupId>org.springframework</groupId>-->
-<!--            <artifactId>spring-jms</artifactId>-->
-<!--            <version>5.3.23</version>-->
-<!--        </dependency>-->
-        <!-- https://mvnrepository.com/artifact/com.azure/azure-identity -->
-<!--        <dependency>-->
-<!--            <groupId>com.azure</groupId>-->
-<!--            <artifactId>azure-identity</artifactId>-->
-<!--            <version>1.7.2</version>-->
-<!--            <scope>compile</scope>-->
-<!--        </dependency>-->
-
-<!--        <dependency>-->
-<!--            <groupId>com.azure.spring</groupId>-->
-<!--            <artifactId>spring-cloud-azure-starter-servicebus-jms</artifactId>-->
-<!--            <version>4.4.1</version>-->
-<!--        </dependency>-->
-
 
 
         <dependency>
@@ -155,13 +124,19 @@
             <version>1.0.42</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
 
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>com.microsoft.azure</groupId>
-                <artifactId>azure-spring-boot-bom</artifactId>
+                <groupId>com.azure.spring</groupId>
+                <artifactId>spring-cloud-azure-dependencies</artifactId>
                 <version>${azure.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
@@ -176,29 +151,5 @@
         </dependencies>
     </dependencyManagement>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>com.mysema.maven</groupId>
-                <artifactId>apt-maven-plugin</artifactId>
-                <version>1.1.3</version>
-                <executions>
-                    <execution>
-                        <goals>
-                            <goal>process</goal>
-                        </goals>
-                        <configuration>
-                            <outputDirectory>target/generated-sources</outputDirectory>
-                            <processor>com.querydsl.apt.jpa.JPAAnnotationProcessor</processor>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>

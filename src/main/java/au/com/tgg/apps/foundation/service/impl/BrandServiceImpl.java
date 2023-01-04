@@ -1,10 +1,8 @@
 package au.com.tgg.apps.foundation.service.impl;
 
 import au.com.tgg.apps.foundation.model.Brand;
-import au.com.tgg.apps.foundation.model.QBrand;
 import au.com.tgg.apps.foundation.repository.BrandRepository;
 import au.com.tgg.apps.foundation.service.BrandService;
-import com.querydsl.core.BooleanBuilder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -46,20 +44,6 @@ public class BrandServiceImpl implements BrandService {
 
     @Override
     public Page<Brand> getBrandPage(Pageable pageable, MultiValueMap<String, String> parameters) {
-        QBrand brand = QBrand.brand;
-        BooleanBuilder booleanBuilder = new BooleanBuilder();
-
-        if(Objects.nonNull(parameters.get("brandCode")) && !parameters.get("brandCode").stream().noneMatch(Objects::nonNull)) {
-            BooleanBuilder codeBoolBuilder = new BooleanBuilder();
-            parameters.get("brandCode").forEach(param -> {
-                codeBoolBuilder.or(brand.brandCode.contains(param));
-            });
-            booleanBuilder.and(codeBoolBuilder);
-        }
-
-        if(Objects.nonNull(parameters.get("brandName")) && !parameters.get("brandName").stream().noneMatch(Objects::nonNull)) {
-            booleanBuilder.and(brand.brandName.contains(parameters.get("brandName").get(0)));
-        }
 
         return null;
     }

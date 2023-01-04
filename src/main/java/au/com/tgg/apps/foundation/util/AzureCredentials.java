@@ -2,10 +2,10 @@ package au.com.tgg.apps.foundation.util;
 
 import com.azure.core.credential.TokenCredential;
 import com.azure.identity.EnvironmentCredentialBuilder;
-import com.microsoft.azure.spring.cloud.config.AppConfigurationCredentialProvider;
-import com.microsoft.azure.spring.cloud.config.KeyVaultCredentialProvider;
+import com.azure.spring.cloud.config.AppConfigurationCredentialProvider;
+import com.azure.spring.cloud.config.KeyVaultCredentialProvider;
 
-public class AzureCredentials implements AppConfigurationCredentialProvider, KeyVaultCredentialProvider{
+public class AzureCredentials implements AppConfigurationCredentialProvider, KeyVaultCredentialProvider {
 
     @Override
     public TokenCredential getKeyVaultCredential(String uri) {
