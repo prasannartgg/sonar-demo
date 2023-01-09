@@ -121,7 +121,7 @@ public class FoundationServiceImpl implements FoundationService {
             responseDTO.setMessage("fail exception happen during process message,  exception detail is: " + ex + " - " + ex.getStackTrace()[0]);
             responseDTO.setNodeValueInOperationObject(FoundationUtil.JSON_NODE_FAIL_INFO, responseDTO.getMessage());
             ex.printStackTrace();
-            LOGGER.error("Exception happen : " + responseDTO.getOperationField());
+            LOGGER.error("Exception happen : " + ex);
             return responseDTO;
         }
     }

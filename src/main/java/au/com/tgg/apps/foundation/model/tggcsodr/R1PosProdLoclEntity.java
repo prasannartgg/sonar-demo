@@ -13,79 +13,282 @@ import java.time.LocalDate;
 @Table(name = "r1pos_prod_locl", schema = "tggcsodr", catalog = "postgres")
 public class R1PosProdLoclEntity {
     @Id
-    private String prodNbr;
-    @Id
-    private Long locnNbr;
-    private BigDecimal loclProdId;
-    private BigDecimal supCode;
-    private String supProdNbr;
-    private BigDecimal onhandQty;
-    private Double onhandVal;
-    private BigDecimal onhandAvgVal;
-    private BigDecimal pordComQty;
-    private Double pordComVal;
-    private BigDecimal bkordComQty;
-    private BigDecimal pickComQty;
-    private BigDecimal outboundQty;
-    private Double outboundVal;
-    private BigDecimal inboundQty;
-    private Double inboundVal;
-    private BigDecimal inPendComQty;
-    private BigDecimal holdComQty;
-    private LocalDate lastRecptDatei;
-    private BigDecimal lastRecptQty;
-    private Double lastRecptVal;
-    private LocalDate lastSaleDatei;
-    private BigDecimal lastSaleQty;
-    private Double lastSaleVal;
-    private String techoneFld1;
-    private String techoneFld2;
-    private BigDecimal techoneFld3;
-    private BigDecimal techoneFld4;
-    private Timestamp techoneFld5;
-    private String cruser;
-    private Timestamp crdatei;
-    private BigDecimal crtime;
-    private String crterm;
-    private String crwindow;
-    private String lastModUser;
-    private Timestamp lastModDatei;
-    private Long lastModTime;
-    private String lastModTerm;
-    private String lastModWindow;
-    private BigDecimal sysTid;
-    private BigDecimal vers;
-    private BigDecimal minLvlQty;
-    private BigDecimal reordLvlQty;
-    private BigDecimal maxLvlQty;
-    private String orideAcctInd;
-    private String ldgCode;
-    private String accnbri;
-    private LocalDate lastTrsfrInDate;
-    private BigDecimal lastTrsfrInQty;
-    private Double lastTrsfrInVal;
-    private BigDecimal rebateValue;
-    private String activeProdInd;
-    private String activeIssInd;
-    private String activeTrsfrInd;
-    private String activePurchInd;
-    private String activeReplenInd;
-    private String activeSalInd;
-    private String custMsgText;
-    private String custMsgType;
-    private String abcClass;
-    private BigDecimal webMinQty;
-    private String webReady;
-    private BigDecimal plpcPrc;
-    private BigDecimal ticketPrc;
-    private BigDecimal semPrc;
-    private Long workorderTmplId;
-    private BigDecimal webComQty;
-    private BigDecimal lockedQty;
-    private BigDecimal fulfillQty;
-
     @Basic
     @Column(name = "prod_nbr")
+    private String prodNbr;
+    @Id
+    @Basic
+    @Column(name = "locn_nbr")
+    private Long locnNbr;
+    @Basic
+    @Column(name = "locl_prod_id")
+    private BigDecimal loclProdId;
+
+    @Basic
+    @Column(name = "sup_code")
+    private BigDecimal supCode;
+
+    @Basic
+    @Column(name = "sup_prod_nbr")
+    private String supProdNbr;
+
+    @Basic
+    @Column(name = "onhand_qty")
+    private BigDecimal onhandQty;
+
+    @Basic
+    @Column(name = "onhand_val")
+    private Double onhandVal;
+
+    @Basic
+    @Column(name = "onhand_avg_val")
+    private BigDecimal onhandAvgVal;
+
+    @Basic
+    @Column(name = "pord_com_qty")
+    private BigDecimal pordComQty;
+
+    @Basic
+    @Column(name = "pord_com_val")
+    private Double pordComVal;
+
+    @Basic
+    @Column(name = "bkord_com_qty")
+    private BigDecimal bkordComQty;
+
+    @Basic
+    @Column(name = "pick_com_qty")
+    private BigDecimal pickComQty;
+
+    @Basic
+    @Column(name = "outbound_qty")
+    private BigDecimal outboundQty;
+
+    @Basic
+    @Column(name = "outbound_val")
+    private Double outboundVal;
+
+    @Basic
+    @Column(name = "inbound_qty")
+    private BigDecimal inboundQty;
+
+    @Basic
+    @Column(name = "inbound_val")
+    private Double inboundVal;
+
+    @Basic
+    @Column(name = "in_pend_com_qty")
+    private BigDecimal inPendComQty;
+
+    @Basic
+    @Column(name = "hold_com_qty")
+    private BigDecimal holdComQty;
+
+    @Basic
+    @Column(name = "last_recpt_datei")
+    private LocalDate lastRecptDatei;
+
+    @Basic
+    @Column(name = "last_recpt_qty")
+    private BigDecimal lastRecptQty;
+
+    @Basic
+    @Column(name = "last_recpt_val")
+    private Double lastRecptVal;
+
+    @Basic
+    @Column(name = "last_sale_datei")
+    private LocalDate lastSaleDatei;
+
+    @Basic
+    @Column(name = "last_sale_qty")
+    private BigDecimal lastSaleQty;
+
+    @Basic
+    @Column(name = "last_sale_val")
+    private Double lastSaleVal;
+
+    @Basic
+    @Column(name = "techone_fld1")
+    private String techoneFld1;
+
+    @Basic
+    @Column(name = "techone_fld2")
+    private String techoneFld2;
+
+    @Basic
+    @Column(name = "techone_fld3")
+    private BigDecimal techoneFld3;
+
+    @Basic
+    @Column(name = "techone_fld4")
+    private BigDecimal techoneFld4;
+
+    @Basic
+    @Column(name = "techone_fld5")
+    private Timestamp techoneFld5;
+
+    @Basic
+    @Column(name = "cruser")
+    private String cruser;
+
+    @Basic
+    @Column(name = "crdatei")
+    private Timestamp crdatei;
+
+    @Basic
+    @Column(name = "crtime")
+    private BigDecimal crtime;
+
+    @Basic
+    @Column(name = "crterm")
+    private String crterm;
+
+    @Basic
+    @Column(name = "crwindow")
+    private String crwindow;
+
+    @Basic
+    @Column(name = "last_mod_user")
+    private String lastModUser;
+
+    @Basic
+    @Column(name = "last_mod_datei")
+    private Timestamp lastModDatei;
+
+    @Basic
+    @Column(name = "last_mod_time")
+    private Long lastModTime;
+
+    @Basic
+    @Column(name = "last_mod_term")
+    private String lastModTerm;
+
+    @Basic
+    @Column(name = "last_mod_window")
+    private String lastModWindow;
+
+    @Basic
+    @Column(name = "sys_tid")
+    private BigDecimal sysTid;
+
+    @Basic
+    @Column(name = "vers")
+    private BigDecimal vers;
+
+    @Basic
+    @Column(name = "min_lvl_qty")
+    private BigDecimal minLvlQty;
+
+    @Basic
+    @Column(name = "reord_lvl_qty")
+    private BigDecimal reordLvlQty;
+
+    @Basic
+    @Column(name = "max_lvl_qty")
+    private BigDecimal maxLvlQty;
+
+    @Basic
+    @Column(name = "oride_acct_ind")
+    private String orideAcctInd;
+
+    @Basic
+    @Column(name = "ldg_code")
+    private String ldgCode;
+
+    @Basic
+    @Column(name = "accnbri")
+    private String accnbri;
+
+    @Basic
+    @Column(name = "last_trsfr_in_date")
+    private LocalDate lastTrsfrInDate;
+
+    @Basic
+    @Column(name = "last_trsfr_in_qty")
+    private BigDecimal lastTrsfrInQty;
+
+    @Basic
+    @Column(name = "last_trsfr_in_val")
+    private Double lastTrsfrInVal;
+
+    @Basic
+    @Column(name = "rebate_value")
+    private BigDecimal rebateValue;
+
+    @Basic
+    @Column(name = "active_prod_ind")
+    private String activeProdInd;
+
+    @Basic
+    @Column(name = "active_iss_ind")
+    private String activeIssInd;
+
+    @Basic
+    @Column(name = "active_trsfr_ind")
+    private String activeTrsfrInd;
+
+    @Basic
+    @Column(name = "active_purch_ind")
+    private String activePurchInd;
+
+    @Basic
+    @Column(name = "active_replen_ind")
+    private String activeReplenInd;
+
+    @Basic
+    @Column(name = "active_sal_ind")
+    private String activeSalInd;
+
+    @Basic
+    @Column(name = "cust_msg_text")
+    private String custMsgText;
+
+    @Basic
+    @Column(name = "cust_msg_type")
+    private String custMsgType;
+
+    @Basic
+    @Column(name = "abc_class")
+    private String abcClass;
+
+    @Basic
+    @Column(name = "web_min_qty")
+    private BigDecimal webMinQty;
+
+    @Basic
+    @Column(name = "web_ready")
+    private String webReady;
+
+    @Basic
+    @Column(name = "plpc_prc")
+    private BigDecimal plpcPrc;
+
+    @Basic
+    @Column(name = "ticket_prc")
+    private BigDecimal ticketPrc;
+
+    @Basic
+    @Column(name = "sem_prc")
+    private BigDecimal semPrc;
+
+    @Basic
+    @Column(name = "workorder_tmpl_id")
+    private Long workorderTmplId;
+
+    @Basic
+    @Column(name = "web_com_qty")
+    private BigDecimal webComQty;
+
+    @Basic
+    @Column(name = "locked_qty")
+    private BigDecimal lockedQty;
+
+    @Basic
+    @Column(name = "fulfill_qty")
+    private BigDecimal fulfillQty;
+
+
     public String getProdNbr() {
         return prodNbr;
     }
@@ -94,8 +297,7 @@ public class R1PosProdLoclEntity {
         this.prodNbr = prodNbr;
     }
 
-    @Basic
-    @Column(name = "locn_nbr")
+
     public Long getLocnNbr() {
         return locnNbr;
     }
@@ -104,8 +306,7 @@ public class R1PosProdLoclEntity {
         this.locnNbr = locnNbr;
     }
 
-    @Basic
-    @Column(name = "locl_prod_id")
+
     public BigDecimal getLoclProdId() {
         return loclProdId;
     }
@@ -114,8 +315,7 @@ public class R1PosProdLoclEntity {
         this.loclProdId = loclProdId;
     }
 
-    @Basic
-    @Column(name = "sup_code")
+
     public BigDecimal getSupCode() {
         return supCode;
     }
@@ -124,8 +324,7 @@ public class R1PosProdLoclEntity {
         this.supCode = supCode;
     }
 
-    @Basic
-    @Column(name = "sup_prod_nbr")
+
     public String getSupProdNbr() {
         return supProdNbr;
     }
@@ -134,8 +333,7 @@ public class R1PosProdLoclEntity {
         this.supProdNbr = supProdNbr;
     }
 
-    @Basic
-    @Column(name = "onhand_qty")
+
     public BigDecimal getOnhandQty() {
         return onhandQty;
     }
@@ -144,8 +342,7 @@ public class R1PosProdLoclEntity {
         this.onhandQty = onhandQty;
     }
 
-    @Basic
-    @Column(name = "onhand_val")
+
     public Double getOnhandVal() {
         return onhandVal;
     }
@@ -154,8 +351,7 @@ public class R1PosProdLoclEntity {
         this.onhandVal = onhandVal;
     }
 
-    @Basic
-    @Column(name = "onhand_avg_val")
+
     public BigDecimal getOnhandAvgVal() {
         return onhandAvgVal;
     }
@@ -164,8 +360,7 @@ public class R1PosProdLoclEntity {
         this.onhandAvgVal = onhandAvgVal;
     }
 
-    @Basic
-    @Column(name = "pord_com_qty")
+
     public BigDecimal getPordComQty() {
         return pordComQty;
     }
@@ -174,8 +369,7 @@ public class R1PosProdLoclEntity {
         this.pordComQty = pordComQty;
     }
 
-    @Basic
-    @Column(name = "pord_com_val")
+
     public Double getPordComVal() {
         return pordComVal;
     }
@@ -184,8 +378,7 @@ public class R1PosProdLoclEntity {
         this.pordComVal = pordComVal;
     }
 
-    @Basic
-    @Column(name = "bkord_com_qty")
+
     public BigDecimal getBkordComQty() {
         return bkordComQty;
     }
@@ -194,8 +387,7 @@ public class R1PosProdLoclEntity {
         this.bkordComQty = bkordComQty;
     }
 
-    @Basic
-    @Column(name = "pick_com_qty")
+
     public BigDecimal getPickComQty() {
         return pickComQty;
     }
@@ -204,8 +396,7 @@ public class R1PosProdLoclEntity {
         this.pickComQty = pickComQty;
     }
 
-    @Basic
-    @Column(name = "outbound_qty")
+
     public BigDecimal getOutboundQty() {
         return outboundQty;
     }
@@ -214,8 +405,7 @@ public class R1PosProdLoclEntity {
         this.outboundQty = outboundQty;
     }
 
-    @Basic
-    @Column(name = "outbound_val")
+
     public Double getOutboundVal() {
         return outboundVal;
     }
@@ -224,8 +414,7 @@ public class R1PosProdLoclEntity {
         this.outboundVal = outboundVal;
     }
 
-    @Basic
-    @Column(name = "inbound_qty")
+
     public BigDecimal getInboundQty() {
         return inboundQty;
     }
@@ -234,8 +423,7 @@ public class R1PosProdLoclEntity {
         this.inboundQty = inboundQty;
     }
 
-    @Basic
-    @Column(name = "inbound_val")
+
     public Double getInboundVal() {
         return inboundVal;
     }
@@ -244,8 +432,7 @@ public class R1PosProdLoclEntity {
         this.inboundVal = inboundVal;
     }
 
-    @Basic
-    @Column(name = "in_pend_com_qty")
+
     public BigDecimal getInPendComQty() {
         return inPendComQty;
     }
@@ -254,8 +441,7 @@ public class R1PosProdLoclEntity {
         this.inPendComQty = inPendComQty;
     }
 
-    @Basic
-    @Column(name = "hold_com_qty")
+
     public BigDecimal getHoldComQty() {
         return holdComQty;
     }
@@ -264,8 +450,7 @@ public class R1PosProdLoclEntity {
         this.holdComQty = holdComQty;
     }
 
-    @Basic
-    @Column(name = "last_recpt_datei")
+
     public LocalDate getLastRecptDatei() {
         return lastRecptDatei;
     }
@@ -274,8 +459,7 @@ public class R1PosProdLoclEntity {
         this.lastRecptDatei = lastRecptDatei;
     }
 
-    @Basic
-    @Column(name = "last_recpt_qty")
+
     public BigDecimal getLastRecptQty() {
         return lastRecptQty;
     }
@@ -284,8 +468,7 @@ public class R1PosProdLoclEntity {
         this.lastRecptQty = lastRecptQty;
     }
 
-    @Basic
-    @Column(name = "last_recpt_val")
+
     public Double getLastRecptVal() {
         return lastRecptVal;
     }
@@ -294,8 +477,7 @@ public class R1PosProdLoclEntity {
         this.lastRecptVal = lastRecptVal;
     }
 
-    @Basic
-    @Column(name = "last_sale_datei")
+
     public LocalDate getLastSaleDatei() {
         return lastSaleDatei;
     }
@@ -304,8 +486,7 @@ public class R1PosProdLoclEntity {
         this.lastSaleDatei = lastSaleDatei;
     }
 
-    @Basic
-    @Column(name = "last_sale_qty")
+
     public BigDecimal getLastSaleQty() {
         return lastSaleQty;
     }
@@ -314,8 +495,7 @@ public class R1PosProdLoclEntity {
         this.lastSaleQty = lastSaleQty;
     }
 
-    @Basic
-    @Column(name = "last_sale_val")
+
     public Double getLastSaleVal() {
         return lastSaleVal;
     }
@@ -324,8 +504,7 @@ public class R1PosProdLoclEntity {
         this.lastSaleVal = lastSaleVal;
     }
 
-    @Basic
-    @Column(name = "techone_fld1")
+
     public String getTechoneFld1() {
         return techoneFld1;
     }
@@ -334,8 +513,7 @@ public class R1PosProdLoclEntity {
         this.techoneFld1 = techoneFld1;
     }
 
-    @Basic
-    @Column(name = "techone_fld2")
+
     public String getTechoneFld2() {
         return techoneFld2;
     }
@@ -344,8 +522,7 @@ public class R1PosProdLoclEntity {
         this.techoneFld2 = techoneFld2;
     }
 
-    @Basic
-    @Column(name = "techone_fld3")
+
     public BigDecimal getTechoneFld3() {
         return techoneFld3;
     }
@@ -354,8 +531,7 @@ public class R1PosProdLoclEntity {
         this.techoneFld3 = techoneFld3;
     }
 
-    @Basic
-    @Column(name = "techone_fld4")
+
     public BigDecimal getTechoneFld4() {
         return techoneFld4;
     }
@@ -364,8 +540,7 @@ public class R1PosProdLoclEntity {
         this.techoneFld4 = techoneFld4;
     }
 
-    @Basic
-    @Column(name = "techone_fld5")
+
     public Timestamp getTechoneFld5() {
         return techoneFld5;
     }
@@ -374,8 +549,7 @@ public class R1PosProdLoclEntity {
         this.techoneFld5 = techoneFld5;
     }
 
-    @Basic
-    @Column(name = "cruser")
+
     public String getCruser() {
         return cruser;
     }
@@ -384,8 +558,7 @@ public class R1PosProdLoclEntity {
         this.cruser = cruser;
     }
 
-    @Basic
-    @Column(name = "crdatei")
+
     public Timestamp getCrdatei() {
         return crdatei;
     }
@@ -394,8 +567,7 @@ public class R1PosProdLoclEntity {
         this.crdatei = crdatei;
     }
 
-    @Basic
-    @Column(name = "crtime")
+
     public BigDecimal getCrtime() {
         return crtime;
     }
@@ -404,8 +576,7 @@ public class R1PosProdLoclEntity {
         this.crtime = crtime;
     }
 
-    @Basic
-    @Column(name = "crterm")
+
     public String getCrterm() {
         return crterm;
     }
@@ -414,8 +585,7 @@ public class R1PosProdLoclEntity {
         this.crterm = crterm;
     }
 
-    @Basic
-    @Column(name = "crwindow")
+
     public String getCrwindow() {
         return crwindow;
     }
@@ -424,8 +594,7 @@ public class R1PosProdLoclEntity {
         this.crwindow = crwindow;
     }
 
-    @Basic
-    @Column(name = "last_mod_user")
+
     public String getLastModUser() {
         return lastModUser;
     }
@@ -434,8 +603,7 @@ public class R1PosProdLoclEntity {
         this.lastModUser = lastModUser;
     }
 
-    @Basic
-    @Column(name = "last_mod_datei")
+
     public Timestamp getLastModDatei() {
         return lastModDatei;
     }
@@ -444,8 +612,7 @@ public class R1PosProdLoclEntity {
         this.lastModDatei = lastModDatei;
     }
 
-    @Basic
-    @Column(name = "last_mod_time")
+
     public Long getLastModTime() {
         return lastModTime;
     }
@@ -454,8 +621,7 @@ public class R1PosProdLoclEntity {
         this.lastModTime = lastModTime;
     }
 
-    @Basic
-    @Column(name = "last_mod_term")
+
     public String getLastModTerm() {
         return lastModTerm;
     }
@@ -464,8 +630,7 @@ public class R1PosProdLoclEntity {
         this.lastModTerm = lastModTerm;
     }
 
-    @Basic
-    @Column(name = "last_mod_window")
+
     public String getLastModWindow() {
         return lastModWindow;
     }
@@ -474,8 +639,7 @@ public class R1PosProdLoclEntity {
         this.lastModWindow = lastModWindow;
     }
 
-    @Basic
-    @Column(name = "sys_tid")
+
     public BigDecimal getSysTid() {
         return sysTid;
     }
@@ -484,8 +648,7 @@ public class R1PosProdLoclEntity {
         this.sysTid = sysTid;
     }
 
-    @Basic
-    @Column(name = "vers")
+
     public BigDecimal getVers() {
         return vers;
     }
@@ -494,8 +657,7 @@ public class R1PosProdLoclEntity {
         this.vers = vers;
     }
 
-    @Basic
-    @Column(name = "min_lvl_qty")
+
     public BigDecimal getMinLvlQty() {
         return minLvlQty;
     }
@@ -504,8 +666,7 @@ public class R1PosProdLoclEntity {
         this.minLvlQty = minLvlQty;
     }
 
-    @Basic
-    @Column(name = "reord_lvl_qty")
+
     public BigDecimal getReordLvlQty() {
         return reordLvlQty;
     }
@@ -514,8 +675,7 @@ public class R1PosProdLoclEntity {
         this.reordLvlQty = reordLvlQty;
     }
 
-    @Basic
-    @Column(name = "max_lvl_qty")
+
     public BigDecimal getMaxLvlQty() {
         return maxLvlQty;
     }
@@ -524,8 +684,7 @@ public class R1PosProdLoclEntity {
         this.maxLvlQty = maxLvlQty;
     }
 
-    @Basic
-    @Column(name = "oride_acct_ind")
+
     public String getOrideAcctInd() {
         return orideAcctInd;
     }
@@ -534,8 +693,7 @@ public class R1PosProdLoclEntity {
         this.orideAcctInd = orideAcctInd;
     }
 
-    @Basic
-    @Column(name = "ldg_code")
+
     public String getLdgCode() {
         return ldgCode;
     }
@@ -544,8 +702,7 @@ public class R1PosProdLoclEntity {
         this.ldgCode = ldgCode;
     }
 
-    @Basic
-    @Column(name = "accnbri")
+
     public String getAccnbri() {
         return accnbri;
     }
@@ -554,8 +711,7 @@ public class R1PosProdLoclEntity {
         this.accnbri = accnbri;
     }
 
-    @Basic
-    @Column(name = "last_trsfr_in_date")
+
     public LocalDate getLastTrsfrInDate() {
         return lastTrsfrInDate;
     }
@@ -564,8 +720,7 @@ public class R1PosProdLoclEntity {
         this.lastTrsfrInDate = lastTrsfrInDate;
     }
 
-    @Basic
-    @Column(name = "last_trsfr_in_qty")
+
     public BigDecimal getLastTrsfrInQty() {
         return lastTrsfrInQty;
     }
@@ -574,8 +729,7 @@ public class R1PosProdLoclEntity {
         this.lastTrsfrInQty = lastTrsfrInQty;
     }
 
-    @Basic
-    @Column(name = "last_trsfr_in_val")
+
     public Double getLastTrsfrInVal() {
         return lastTrsfrInVal;
     }
@@ -584,8 +738,7 @@ public class R1PosProdLoclEntity {
         this.lastTrsfrInVal = lastTrsfrInVal;
     }
 
-    @Basic
-    @Column(name = "rebate_value")
+
     public BigDecimal getRebateValue() {
         return rebateValue;
     }
@@ -594,8 +747,7 @@ public class R1PosProdLoclEntity {
         this.rebateValue = rebateValue;
     }
 
-    @Basic
-    @Column(name = "active_prod_ind")
+
     public String getActiveProdInd() {
         return activeProdInd;
     }
@@ -604,8 +756,7 @@ public class R1PosProdLoclEntity {
         this.activeProdInd = activeProdInd;
     }
 
-    @Basic
-    @Column(name = "active_iss_ind")
+
     public String getActiveIssInd() {
         return activeIssInd;
     }
@@ -614,8 +765,7 @@ public class R1PosProdLoclEntity {
         this.activeIssInd = activeIssInd;
     }
 
-    @Basic
-    @Column(name = "active_trsfr_ind")
+
     public String getActiveTrsfrInd() {
         return activeTrsfrInd;
     }
@@ -624,8 +774,7 @@ public class R1PosProdLoclEntity {
         this.activeTrsfrInd = activeTrsfrInd;
     }
 
-    @Basic
-    @Column(name = "active_purch_ind")
+
     public String getActivePurchInd() {
         return activePurchInd;
     }
@@ -634,8 +783,7 @@ public class R1PosProdLoclEntity {
         this.activePurchInd = activePurchInd;
     }
 
-    @Basic
-    @Column(name = "active_replen_ind")
+
     public String getActiveReplenInd() {
         return activeReplenInd;
     }
@@ -644,8 +792,7 @@ public class R1PosProdLoclEntity {
         this.activeReplenInd = activeReplenInd;
     }
 
-    @Basic
-    @Column(name = "active_sal_ind")
+
     public String getActiveSalInd() {
         return activeSalInd;
     }
@@ -654,8 +801,7 @@ public class R1PosProdLoclEntity {
         this.activeSalInd = activeSalInd;
     }
 
-    @Basic
-    @Column(name = "cust_msg_text")
+
     public String getCustMsgText() {
         return custMsgText;
     }
@@ -664,8 +810,7 @@ public class R1PosProdLoclEntity {
         this.custMsgText = custMsgText;
     }
 
-    @Basic
-    @Column(name = "cust_msg_type")
+
     public String getCustMsgType() {
         return custMsgType;
     }
@@ -674,8 +819,7 @@ public class R1PosProdLoclEntity {
         this.custMsgType = custMsgType;
     }
 
-    @Basic
-    @Column(name = "abc_class")
+
     public String getAbcClass() {
         return abcClass;
     }
@@ -684,8 +828,7 @@ public class R1PosProdLoclEntity {
         this.abcClass = abcClass;
     }
 
-    @Basic
-    @Column(name = "web_min_qty")
+
     public BigDecimal getWebMinQty() {
         return webMinQty;
     }
@@ -694,8 +837,7 @@ public class R1PosProdLoclEntity {
         this.webMinQty = webMinQty;
     }
 
-    @Basic
-    @Column(name = "web_ready")
+
     public String getWebReady() {
         return webReady;
     }
@@ -704,8 +846,7 @@ public class R1PosProdLoclEntity {
         this.webReady = webReady;
     }
 
-    @Basic
-    @Column(name = "plpc_prc")
+
     public BigDecimal getPlpcPrc() {
         return plpcPrc;
     }
@@ -714,8 +855,7 @@ public class R1PosProdLoclEntity {
         this.plpcPrc = plpcPrc;
     }
 
-    @Basic
-    @Column(name = "ticket_prc")
+
     public BigDecimal getTicketPrc() {
         return ticketPrc;
     }
@@ -724,8 +864,7 @@ public class R1PosProdLoclEntity {
         this.ticketPrc = ticketPrc;
     }
 
-    @Basic
-    @Column(name = "sem_prc")
+
     public BigDecimal getSemPrc() {
         return semPrc;
     }
@@ -734,8 +873,7 @@ public class R1PosProdLoclEntity {
         this.semPrc = semPrc;
     }
 
-    @Basic
-    @Column(name = "workorder_tmpl_id")
+
     public Long getWorkorderTmplId() {
         return workorderTmplId;
     }
@@ -744,8 +882,7 @@ public class R1PosProdLoclEntity {
         this.workorderTmplId = workorderTmplId;
     }
 
-    @Basic
-    @Column(name = "web_com_qty")
+
     public BigDecimal getWebComQty() {
         return webComQty;
     }
@@ -754,8 +891,7 @@ public class R1PosProdLoclEntity {
         this.webComQty = webComQty;
     }
 
-    @Basic
-    @Column(name = "locked_qty")
+
     public BigDecimal getLockedQty() {
         return lockedQty;
     }
@@ -764,8 +900,7 @@ public class R1PosProdLoclEntity {
         this.lockedQty = lockedQty;
     }
 
-    @Basic
-    @Column(name = "fulfill_qty")
+
     public BigDecimal getFulfillQty() {
         return fulfillQty;
     }

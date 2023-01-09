@@ -82,15 +82,15 @@ public class ResponseDTO {
         return nodeValue;
     }
 
-    public JSONObject getOperationField() {
-        JSONObject operateObject = null;
-        try {
-            JSONObject dataObject = new JSONObject((String) this.data);
-            operateObject = dataObject.getJSONObject("operations");
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-        return operateObject;
-    }
+//    public JSONObject getOperationField() {
+//        JSONObject operateObject = null;
+//        try {
+//            JSONObject dataObject = new JSONObject((String) this.data);
+//            operateObject = dataObject.getJSONObject("operations");
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
+//        return operateObject;
+//    }
 
 }

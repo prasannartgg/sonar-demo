@@ -1,4 +1,4 @@
-
+/* TopicReceiveController. Superseded by TopicReceiveController.java
 package au.com.tgg.apps.foundation.handler;
 import com.azure.messaging.servicebus.*;
 //import org.slf4j.Logger;
@@ -114,3 +114,4 @@ public class ServiceBusHandler {
 
 }
 
+*/
