@@ -196,7 +196,11 @@ public class FoundationServiceImpl implements FoundationService {
         } else if (entityName.equalsIgnoreCase(FoundationUtil.JSON_TABLE_NAME_PRODUCT_UDA_DATE)) {
             ProductUdaDate productUdaDate = objectMapper.readValue(request, ProductUdaDate.class);
             return productUdaDateCrudService.update(productUdaDate);
-        } else {
+        } else if (entityName.equalsIgnoreCase(FoundationUtil.JSON_TABLE_NAME_BRAND)) {
+            Brand brand = objectMapper.readValue(request, Brand.class);
+            return brandCrudService.update(brand);
+        }
+        else {
             return new ResponseDTO("MsgException: Update message was not processed", HttpStatus.INTERNAL_SERVER_ERROR, request);
         }
     }

@@ -11,6 +11,7 @@ import java.util.List;
 public interface BrandRepository extends CrudRepository<BrandEntity, String> {
     BrandEntity findBrandEntityByBrandName(String brand);
     List<BrandEntity> findBrandEntitiesByBrandName(String brand_name);
+    List<BrandEntity> findBrandEntitiesByBrandCode(String brandCode);
     BrandEntity findBrandEntityByBrandCode(String brand_code);
 
     @Query(value = "SELECT nextval('tggcsodr.seq_brand_id')", nativeQuery = true)

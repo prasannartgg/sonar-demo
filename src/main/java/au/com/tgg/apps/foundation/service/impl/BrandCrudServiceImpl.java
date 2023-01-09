@@ -34,13 +34,13 @@ public class BrandCrudServiceImpl implements CrudService<Brand> {
     @Override
     public ResponseDTO update(Brand brand) throws Exception {
         BrandEntity brandEntity;
-        if (brandRepository.findBrandEntitiesByBrandName(brand.getBrandName()).isEmpty()) {
+        if (brandRepository.findBrandEntitiesByBrandCode(brand.getBrandName()).isEmpty()) {
             brandEntity = new BrandEntity();
             brandEntity.setCreatedUser(brandEntity.getCreatedUser());
             brandEntity.setCreatedDate(FoundationUtil.localDateTime());
             brandEntity.setCreatedId(brandEntity.getCreatedId());
         } else {
-            brandEntity = brandRepository.findBrandEntitiesByBrandName(brand.getBrandName()).get(0);
+            brandEntity = brandRepository.findBrandEntitiesByBrandCode(brand.getBrandName()).get(0);
         }
         CopyBeanUtils.myCopyProperties(brand, brandEntity);
         brandEntity.setBrandCode(brand.getBrandName().toUpperCase());
