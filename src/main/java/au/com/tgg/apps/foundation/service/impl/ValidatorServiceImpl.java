@@ -84,12 +84,11 @@ public class ValidatorServiceImpl implements ValidatorService {
             LOGGER.warn(String.valueOf(exception.getStackTrace().toString()));
             exception.printStackTrace();
             LOGGER.warn("Function:RIBMsgValidator encountered exception when process message : " + exception.getMessage());
-            ServiceBusSender.sendMessage(System.getenv("invalidMsgServiceBusTopic"), csodrEntityJsonString);
+//            ServiceBusSender.sendMessage(System.getenv("invalidMsgServiceBusTopic"), csodrEntityJsonString);
             return Mono.just(OBJECTMAPPER.writeValueAsString(new ResponseDTO("Function:RIBMsgValidator encountered exception when process message, exception detail: " + exception.getMessage(), HttpStatus.INTERNAL_SERVER_ERROR, jsonString)));
 //            return httpStatus.is4xxClientError()  ;
 //            return request.createResponseBuilder(H0.ttpStatus.INTERNAL_SERVER_ERROR).body("Function:RIBMsgValidator encountered exception when process message, exception detail: " + exception.getMessage() + exception.getStackTrace()[0]).build();
         }
-//        return null;
     }
 
     public static String getSchemaFromBlob(String connection, String schemaFileName, String containerName) throws Exception {
