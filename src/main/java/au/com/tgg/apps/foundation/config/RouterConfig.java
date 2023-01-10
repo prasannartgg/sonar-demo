@@ -1,6 +1,5 @@
 package au.com.tgg.apps.foundation.config;
 
-import au.com.tgg.apps.foundation.handler.AppSvcHandler;
 import au.com.tgg.apps.foundation.handler.FoundationHandler;
 import au.com.tgg.apps.foundation.handler.UtilHandler;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,13 +18,10 @@ public class RouterConfig {
 
     private final FoundationHandler foundationHandler;
 
-    private final AppSvcHandler appSvcHandler;
-
     @Autowired
-    public RouterConfig(UtilHandler utilHandler, FoundationHandler foundationHandler, AppSvcHandler appSvcHandler) {
+    public RouterConfig(UtilHandler utilHandler, FoundationHandler foundationHandler) {
         this.utilHandler = utilHandler;
         this.foundationHandler = foundationHandler;
-        this.appSvcHandler = appSvcHandler;
     }
 
 

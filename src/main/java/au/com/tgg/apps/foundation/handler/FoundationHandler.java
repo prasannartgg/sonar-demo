@@ -39,17 +39,4 @@ public class FoundationHandler {
                         .contentType(MediaType.APPLICATION_JSON)
                         .body(BodyInserters.fromValue(respBody)));
     }
-/*
-    public Mono<String> recieveServiceBusMsgs(ServerRequest serverRequest) {
-        try {
-            ServiceBusHandler.receiveMessages();
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        return Mono.just("success");
-    }
-    */
-
-
-
 }
